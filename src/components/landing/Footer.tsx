@@ -7,8 +7,15 @@ const footerLinks = [
 
 const Footer = () => {
   return (
-    <footer id="contact" className="bg-muted/50 border-t border-border">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+    <footer id="contact" className="relative bg-muted/50 border-t border-border overflow-hidden">
+      {/* Large Background Text */}
+      <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none overflow-hidden">
+        <span className="text-[12rem] sm:text-[16rem] lg:text-[20rem] xl:text-[28rem] font-extrabold text-foreground/[0.03] whitespace-nowrap tracking-tighter leading-none">
+          Careerflow
+        </span>
+      </div>
+
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-16">
           {/* Left */}
           <div>
