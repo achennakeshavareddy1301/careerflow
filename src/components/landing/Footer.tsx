@@ -8,22 +8,21 @@ const footerLinks = [
 const Footer = () => {
   return (
     <footer id="contact" className="relative bg-muted/50 border-t border-border overflow-hidden">
-      {/* Large Background Text */}
+      {/* Large Background Text with Colors */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none overflow-hidden">
-        <span className="text-[12rem] sm:text-[16rem] lg:text-[20rem] xl:text-[28rem] font-extrabold text-foreground/[0.03] whitespace-nowrap tracking-tighter leading-none">
-          Careerflow
+        <span className="text-[6rem] sm:text-[8rem] lg:text-[10rem] xl:text-[14rem] font-extrabold whitespace-nowrap tracking-tighter leading-none opacity-[0.08] animate-pulse" style={{ animationDuration: '4s' }}>
+          <span className="text-foreground">Career</span>
+          <span className="text-primary">flow</span>
         </span>
       </div>
+
+      {/* Gradient overlay for visual effect */}
+      <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-transparent to-secondary/5 pointer-events-none" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-16">
           {/* Left */}
           <div>
-            <a href="#" className="inline-block mb-4">
-              <span className="text-xl font-bold text-foreground">
-                Career<span className="text-primary">flow</span>
-              </span>
-            </a>
             <p className="text-sm text-muted-foreground max-w-md">
               Careerflow is a job application management system for students and early-career professionals. 
               Take control of your job search and never miss an opportunity again.
@@ -31,7 +30,7 @@ const Footer = () => {
           </div>
 
           {/* Right */}
-          <div className="flex flex-wrap gap-8 lg:justify-end">
+          <div className="flex flex-wrap gap-8 lg:justify-end items-start">
             {footerLinks.map((link) => (
               <a
                 key={link.label}
